@@ -67,7 +67,6 @@ button {
     to{border-right-color: transparent;}
   }
 
-<<<<<<< HEAD
   .panel {
     display: block;
     align-content: center;
@@ -76,7 +75,6 @@ button {
   }
 
 
-=======
 @keyframes fadeInUp {
   from {
       transform: translate3d(0,40px,0)
@@ -120,4 +118,3 @@ button {
   justify-content: center;
   margin: auto;
 }
->>>>>>> ebbdd142e89d6e52f5a43daaf56338a4ced53713
