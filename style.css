@@ -1,6 +1,5 @@
 body {
-    /*background-color: #c1e7fa;*/
-    background-color: black;
+    background-color: #c1e7fa;
     justify-content: center;
 }
 .header {
@@ -52,3 +51,5 @@ h2 {
     justify-content: center;
     margin: auto;
   }
+
+
