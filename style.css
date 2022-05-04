@@ -25,12 +25,34 @@ h2 {
     width: auto;
     margin: 0 auto;
     border-right: 2px solid rgba(192, 233, 254, 0.75);
-    font-size: 1.25em;
+    font-size: 1.3em;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
 }
 
+button {
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+}
+.option-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em;
+  flex-direction: column;
+}
+.option {
+  font-size: 1.2em;
+  margin: 1em;
+  width: fit-content;
+  height: 1.5em;
+}
+.navigation{
+  display: flex;
+  justify-content: center;
+}
 /* Animation */
 .anim-typewriter {
     animation: typewriter 1.5s steps(25) 1s 1 normal both,
@@ -38,13 +60,14 @@ h2 {
   }
   @keyframes typewriter{
     from{width: 0;}
-    to{width: 8.5em;}
+    to{width: 23em;}
   }
   @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
     to{border-right-color: transparent;}
   }
 
+<<<<<<< HEAD
   .panel {
     display: block;
     align-content: center;
@@ -53,3 +76,48 @@ h2 {
   }
 
 
+=======
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+}
+
+#op1 {
+  animation-delay: 3s;
+}
+#op2 {
+  animation-delay: 3.75s;
+}
+#op3 {
+  animation-delay: 4.5s;
+}
+#op4 {
+  animation-delay: 5.25s;
+}
+.panel {
+  display: block;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}
+>>>>>>> ebbdd142e89d6e52f5a43daaf56338a4ced53713
