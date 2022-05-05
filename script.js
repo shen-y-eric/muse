@@ -2,11 +2,11 @@
 // Questions will be asked
 const Questions = [{
     id: 0,
-    q: "What activity sounds most appealing to you right now?",
-    a: [{ text: "Sitting on the couch eating ice cream", isCorrect: false },
-        { text: "Going to a club aye", isCorrect: false },
-        { text: "Taking a long drive", isCorrect: true },
-        { text: "Karaoke!", isCorrect: false }
+    q: "what activity sounds most appealing to you right now?",
+    a: [{ text: "sitting on the couch eating ice cream", isCorrect: false },
+        { text: "going to a club aye", isCorrect: false },
+        { text: "taking a long drive", isCorrect: true },
+        { text: "karaoke!", isCorrect: false }
     ]
 
 },

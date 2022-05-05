@@ -28,10 +28,11 @@ h2 {
     width: auto;
     margin: 0 auto;
     border-right: 2px solid rgba(192, 233, 254, 0.75);
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
 button {
@@ -63,7 +64,7 @@ button {
   }
   @keyframes typewriter{
     from{width: 0;}
-    to{width: 23em;}
+    to{width: 26em;}
   }
 
   .panel {
@@ -122,11 +123,12 @@ button {
 .answer {
   margin-top: 1em;
   margin-left: 2em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   width: 0;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid rgba(192, 233, 254, 0.75);
+  font-family: 'Inter', sans-serif;
 }
 
 .anim-typewriter1 {
@@ -135,7 +137,7 @@ button {
 }
 @keyframes typewriter1{
   from{width: 0;}
-  to{width: 10em;}
+  to{width: 12em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
@@ -147,33 +149,35 @@ button {
   justify-content: center;
   align-items: center;
   animation-delay: 2.75s;
+  margin-top: 2.5em;
 }
+
 .music-player{
   width: 350px;
   height: 550px;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.088);
   box-shadow: 0 100px 200px rgba(255, 255, 255, 0.1);
   padding: 30px;
   overflow: hidden;
   color: black;
+  font-family: 'Inter', sans-serif;
 }
 
 .music-name,
 .artist-name{
   text-align: center;
   text-transform: capitalize;
-  font-family: 'Raleway', sans-serif;
 }
 
 .music-name{
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .artist-name{
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .disk{
@@ -282,7 +286,7 @@ button {
 }
 
 .play-btn.pause{
-  animation: pulse 2s linear infinite;
+  animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse{
