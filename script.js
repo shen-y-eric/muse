@@ -1,5 +1,6 @@
 
 // Questions will be asked
+
 const Questions = [{
     id: 0,
     q: "what activity sounds most appealing to you right now?",
@@ -116,6 +117,31 @@ op4.value = Questions[id].a[3].isCorrect;
 
 var selected = "";
 
+var binNumber = 0;
+
+function getNumber() {
+    if (op1.value) {
+        binNumber = 0;
+    }
+    if (op2.value) {
+        binNumber = 100;
+    }
+    if (op3.value) {
+        binNumber = 20;
+    }
+    if (op4.value) {
+        binNumber = 40;
+    }
+    if (op5.value) {
+        binNumber = 60;
+    }
+    if (op6.value) {
+        binNumber = 80;
+    }
+    return binNumber;
+}
+
+
 // Show selection for op1
 op1.addEventListener("click", () => {
     op1.style.backgroundColor = "lightgoldenrodyellow";
@@ -125,6 +151,10 @@ op1.addEventListener("click", () => {
     op5.style.backgroundColor = "lightskyblue";
     op6.style.backgroundColor = "lightskyblue";
     selected = op1.value;
+    if (Questions[id].id == 0) {
+        binNumber = getNumber();
+        console.log(binNumber);
+    }
 })
 
 // Show selection for op2
@@ -136,6 +166,10 @@ op2.addEventListener("click", () => {
     op5.style.backgroundColor = "lightskyblue";
     op6.style.backgroundColor = "lightskyblue";
     selected = op2.value;
+    if (Questions[id] == 0) {
+        binNumber = getNumber();
+        console.log(binNumber);
+    }
 })
 
 // Show selection for op3
@@ -147,6 +181,10 @@ op3.addEventListener("click", () => {
     op5.style.backgroundColor = "lightskyblue";
     op6.style.backgroundColor = "lightskyblue";
     selected = op3.value;
+    if (Questions[id] == 0) {
+        binNumber = getNumber();
+        console.log(binNumber);
+    }
 })
 
 // Show selection for op4
@@ -158,10 +196,14 @@ op4.addEventListener("click", () => {
     op5.style.backgroundColor = "lightskyblue";
     op6.style.backgroundColor = "lightskyblue";
     selected = op4.value;
+    if (Questions[id] == 0) {
+        binNumber = getNumber();
+        console.log(binNumber);
+    }
 })
 
 // Show selection for op5
-op4.addEventListener("click", () => {
+op5.addEventListener("click", () => {
     op1.style.backgroundColor = "lightskyblue";
     op2.style.backgroundColor = "lightskyblue";
     op3.style.backgroundColor = "lightskyblue";
@@ -169,10 +211,14 @@ op4.addEventListener("click", () => {
     op5.style.backgroundColor = "lightgoldenrodyellow";
     op6.style.backgroundColor = "lightskyblue";
     selected = op5.value;
+    if (Questions[id] == 0) {
+        binNumber = getNumber();
+        console.log(binNumber);
+    }
 })
 
 // Show selection for op6
-op4.addEventListener("click", () => {
+op6.addEventListener("click", () => {
     op1.style.backgroundColor = "lightskyblue";
     op2.style.backgroundColor = "lightskyblue";
     op3.style.backgroundColor = "lightskyblue";
@@ -180,6 +226,10 @@ op4.addEventListener("click", () => {
     op5.style.backgroundColor = "lightskyblue";
     op6.style.backgroundColor = "lightgoldenrodyellow";
     selected = op6.value;
+    if (Questions[id] == 0) {
+        binNumber = getNumber();
+        console.log(binNumber);
+    }
 })
 }
 
