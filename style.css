@@ -112,6 +112,13 @@ button {
 #op4 {
   animation-delay: 5.25s;
 }
+#op5 {
+  animation-delay: 6s;
+}
+#op6 {
+  animation-delay: 6.75s;
+}
+
 .panel {
   display: block;
   align-content: center;

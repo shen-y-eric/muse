@@ -6,8 +6,8 @@ const Questions = [{
     a: [{ text: "sitting on the couch eating ice cream", image: "", isCorrect: false },
         { text: "going to a club aye", image: "", isCorrect: false },
         { text: "taking a long drive", image: "", isCorrect: true },
-        { text: "taking a long drive", image: "", isCorrect: true },
-        { text: "taking a long drive", image: "", isCorrect: true },
+        { text: "studying :')", image: "", isCorrect: true },
+        { text: "eating", image: "", isCorrect: true },
         { text: "karaoke!", image: "", isCorrect: false }
     ]
 
@@ -17,7 +17,7 @@ const Questions = [{
     q: "What drink would you want right now? ",
     a: [{ text: "Hot drink (cocoa, tea) ", image: "", isCorrect: false, isSelected: false },
         { text: "Shots shots shots ", image: "", isCorrect: false },
-        { text: "Chill drink (beer, cider)", mage: "", isCorrect: false },
+        { text: "Chill drink (beer, cider)", image: "", isCorrect: false },
         { text: "Boba !", image: "", isCorrect: true },
         { text: "Coffee", image: ""},
         { text: "Energy drink", image: ""}
@@ -36,6 +36,7 @@ const Questions = [{
     ]
 
 },
+/*
 {
     id: 3,
     q: "What emoji are you?",
@@ -47,16 +48,16 @@ const Questions = [{
         { text: "", image: 'emoji-images/answer6.png', isCorrect: false }
     ]
 
-},
+}, */
 {
     id: 4,
     q: "How many people do you wanna be around?",
     a: [{ text: "No one (free spirit)", isCorrect: false },
         { text: "Hundreds if not thousands", isCorrect: false },
         { text: "Just some amigos", isCorrect: true },
-        { text: "Just some amigos", isCorrect: true },
-        { text: "Just some amigos", isCorrect: true },
-        { text: "rajkot", isCorrect: false }
+        { text: "Just my phone", isCorrect: true },
+        { text: "With my bestie", isCorrect: true },
+        { text: "Wha", isCorrect: false }
     ]
 
 },
@@ -180,20 +181,6 @@ op4.addEventListener("click", () => {
     op6.style.backgroundColor = "lightgoldenrodyellow";
     selected = op6.value;
 })
-
-// Grabbing the evaluate button
-const evaluate = document.getElementsByClassName("evaluate");
-
-// Evaluate method
-evaluate[0].addEventListener("click", () => {
-    if (selected == "true") {
-        result[0].innerHTML = "True";
-        result[0].style.color = "green";
-    } else {
-        result[0].innerHTML = "False";
-        result[0].style.color = "red";
-    }
-})
 }
 
 if (start) {
@@ -211,5 +198,6 @@ if (id < 4) {
     iterate(id);
     console.log(id);
 }
-
 })
+
+const back = document.getElementsByClassName('back')[0];
