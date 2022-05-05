@@ -2,6 +2,9 @@ body {
     background-color: #c1e7fa;
     justify-content: center;
 }
+#page2 {
+  background-color: #D08EEFC9;
+}
 .header {
     display: flex;
     justify-content: center;
@@ -62,10 +65,6 @@ button {
     from{width: 0;}
     to{width: 23em;}
   }
-  @keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
-  }
 
   .panel {
     display: block;
@@ -117,4 +116,213 @@ button {
   align-content: center;
   justify-content: center;
   margin: auto;
+}
+
+/* Page 2 */
+.answer {
+  margin-top: 1em;
+  margin-left: 2em;
+  font-size: 1.5em;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgba(192, 233, 254, 0.75);
+}
+
+.anim-typewriter1 {
+  animation: typewriter1 1s steps(25) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter1{
+  from{width: 0;}
+  to{width: 10em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 2.75s;
+}
+.music-player{
+  width: 350px;
+  height: 550px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 100px 200px rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  overflow: hidden;
+  color: black;
+}
+
+.music-name,
+.artist-name{
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'Raleway', sans-serif;
+}
+
+.music-name{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.artist-name{
+  font-size: 17px;
+}
+
+.disk{
+  position: relative;
+  display: block;
+  margin: 40px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-image: url('mraz.jpg');
+  background-size: cover;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+}
+
+.disk::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+}
+
+.song-slider{
+  width: 100%;
+  position: relative;
+}
+
+.seek-bar{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.seek-bar::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 1px;
+  height: 20px;
+  box-shadow: -400px 0 0 400px #8e98f1;
+}
+
+.current-time,
+.song-duration{
+  font-size: 14px;
+}
+
+.song-duration{
+  position: absolute;
+  right: 0;
+}
+
+.controls{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.play-btn{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: none;
+}
+
+.play-btn span{
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 30px;
+  border-radius: 2px;
+  background: #7d85c7;
+  transition: .5s;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.play-btn span:nth-child(2){
+  left: 55%;
+  transform-origin: center;
+}
+
+.play-btn.pause span:nth-child(2){
+  transform: translateY(-50%) scaleY(0);
+}
+
+.play-btn.pause span:nth-child(1){
+  width: 35%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-btn.pause{
+  animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse{
+  0%{
+      box-shadow: 0;
+  }
+  50%{
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  100%{
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.btn{
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes rotate{
+  0%{
+      transform: rotate(0);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+.disk{
+  animation: rotate 20s linear infinite;
+  animation-play-state: paused;
+}
+
+.disk.play{
+  animation-play-state: running;
 }
