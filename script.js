@@ -121,6 +121,8 @@ const op4 = document.getElementById('op4');
 const op5 = document.getElementById('op5');
 const op6 = document.getElementById('op6');
 
+const p2 = document.getElementById('page2');
+
 
 // Providing option text 
 op1.innerHTML = Questions[id].a[0].text + '<img src="'+Questions[id].a[0].image+'">';
@@ -289,3 +291,26 @@ back.addEventListener("click", () => {
     });
 
 
+const back = document.getElementsByClassName('back')[0];
+
+
+function getSong() {
+    if (binNumber == 0) {
+        /* MAKE SAD SONG */
+    }
+    if (binNumber == 20) {
+        /* MAKE STUDY MUSIC SONG */
+    }
+    if (binNumber == 40) {
+        /* MAKE EATING SONG */
+    }
+    if (binNumber == 60) {
+        /* MAKE DRIVING BOP SONG */
+    }
+    if (binNumber == 80) {
+        /* MAKE KARAOKE SONG */
+    }
+    if (binNumber == 100) {
+        /* MAKE DANCE CLUB SONG */
+    }
+}
