@@ -13,14 +13,10 @@ p2.addEventListener('DOMContentLoaded', () => {
     console.log(c);
   })
 
-
-
-
 console.log(p2); */
 /*console.log(p2.style.backgroundColor);*/
 
-
-
+var binNumber = 0;
 
 const Questions = [{
     id: 0,
@@ -58,19 +54,6 @@ const Questions = [{
     ]
 
 },
-/*
-{
-    id: 3,
-    q: "What emoji are you?",
-    a: [{ text: "", image: 'emoji-images/answer1.png', isCorrect: false },
-        { text: "", image: 'emoji-images/answer2.png', isCorrect: false },
-        { text: "", image: 'emoji-images/answer3.png', isCorrect: true },
-        { text: "", image: 'emoji-images/answer4.png', isCorrect: true },
-        { text: "", image: 'emoji-images/answer5.png', isCorrect: true },
-        { text: "", image: 'emoji-images/answer6.png', isCorrect: false }
-    ]
-
-}, */
 {
     id: 3,
     q: "How many people do you wanna be around?",
@@ -83,17 +66,6 @@ const Questions = [{
     ]
 
 }
-// {
-//     id: 5,
-//     q: "What genre of music are you feeling the most?",
-//     a: [{ text: "surat", isCorrect: false },
-//         { text: "vadodara", isCorrect: false },
-//         { text: "gandhinagar", isCorrect: true },
-//         { text: "rajkot", isCorrect: false }
-//     ]
-
-// }
-
 ]
 
 // Set start
@@ -121,7 +93,7 @@ const op4 = document.getElementById('op4');
 const op5 = document.getElementById('op5');
 const op6 = document.getElementById('op6');
 
-const p2 = document.getElementById('page2');
+//const p2 = document.getElementById('page2');
 
 
 // Providing option text 
@@ -140,8 +112,6 @@ op4.value = Questions[id].a[3].isCorrect;
 
 var selected = "";
 
-var binNumber = 0;
-
 
 // Show selection for op1
 op1.addEventListener("click", () => {
@@ -155,10 +125,9 @@ op1.addEventListener("click", () => {
     if (Questions[id].id == 0) {
         if (selected) {
             binNumber = 0;
-            p2.body.style.backgroundColor = "blue";
+           
 
         }
-        console.log(binNumber);
     }
 })
 
@@ -175,7 +144,6 @@ op2.addEventListener("click", () => {
         if (selected) {
             binNumber = 100;
         }
-        console.log(binNumber);
     }
 })
 
@@ -192,7 +160,6 @@ op3.addEventListener("click", () => {
         if (selected) {
             binNumber = 60;
         }
-        console.log(binNumber);
     }
    
 })
@@ -210,7 +177,6 @@ op4.addEventListener("click", () => {
         if (selected) {
             binNumber = 20;
         }
-        console.log(binNumber);
     }
    
 })
@@ -228,7 +194,6 @@ op5.addEventListener("click", () => {
         if (selected) {
             binNumber = 40;
         }
-        console.log(binNumber);
     }
    
 })
@@ -246,14 +211,15 @@ op6.addEventListener("click", () => {
         if (selected) {
             binNumber = 80;
         }
-        console.log(binNumber);
     }
   
 })
+console.log(binNumber);
 }
 
 if (start) {
 iterate("0");
+console.log(binNumber);
 }
 
 // Next button and method
@@ -276,8 +242,7 @@ op5.style.backgroundColor = null;
 op6.style.backgroundColor = null;
 if (id == 4) {
     window.location.href = "answers.html";
-}
-
+    }
 }
 );
 
@@ -288,25 +253,15 @@ back.addEventListener("click", () => {
     id--;
     iterate(id);
     console.log(id);
-    });
+});
 
-function getSong() {
-    if (binNumber == 0) {
-        /* MAKE SAD SONG */
-    }
-    if (binNumber == 20) {
-        /* MAKE STUDY MUSIC SONG */
-    }
-    if (binNumber == 40) {
-        /* MAKE EATING SONG */
-    }
-    if (binNumber == 60) {
-        /* MAKE DRIVING BOP SONG */
-    }
-    if (binNumber == 80) {
-        /* MAKE KARAOKE SONG */
-    }
-    if (binNumber == 100) {
-        /* MAKE DANCE CLUB SONG */
-    }
-}
+
+//const num = binNumber;
+
+//export default num;
+
+
+
+//export const num = binNumber;
+
+/*export {binNumber as num};*/

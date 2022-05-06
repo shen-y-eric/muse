@@ -1,4 +1,33 @@
 
+// import {num} from "./script.js";
+
+var s = songs[0];
+
+function getSong() {
+    console.log(binNumber);
+    if (binNumber == 0) {
+        s = songs[4];
+    }
+    if (binNumber == 20) {
+        s = songs[0];
+    }
+    if (binNumber == 40) {
+        s = songs[8];
+    }
+    if (binNumber == 60) {
+        s = songs[5];
+    }
+    if (binNumber == 80) {
+        s = songs[3];
+    }
+    if (binNumber == 100) {
+        s = songs[2];
+    }
+    console.log(s.name);
+    return s;
+}
+
+
 let currentMusic = 0;
 
 const music = document.querySelector('#audio');
@@ -27,7 +56,8 @@ playBtn.addEventListener('click', () => {
 
 const setMusic = (i) => {
     seekBar.value = 0; // set range slide value to 0;
-    let song = songs[i];
+    //let song = songs[i];
+    let song = getSong();
     currentMusic = i;
     music.src = song.path;
 
