@@ -1,5 +1,26 @@
 
 // Questions will be asked
+/*
+const p2 = window.open('answers.html');
+
+console.log(p2);
+
+p2.addEventListener('DOMContentLoaded', () => {
+    // Now we can access the #test element on the other page
+    //const testDiv = page.document.getElementById('test')
+    //testDiv.textContent = 'Hello world!'
+    const c = p2.document.body.style.backgroundColor;
+    console.log(c);
+  })
+
+
+
+
+console.log(p2); */
+/*console.log(p2.style.backgroundColor);*/
+
+
+
 
 const Questions = [{
     id: 0,
@@ -51,27 +72,27 @@ const Questions = [{
 
 }, */
 {
-    id: 4,
+    id: 3,
     q: "How many people do you wanna be around?",
-    a: [{ text: "No one (free spirit)", isCorrect: false },
-        { text: "Hundreds if not thousands", isCorrect: false },
-        { text: "Just some amigos", isCorrect: true },
-        { text: "Just my phone", isCorrect: true },
-        { text: "With my bestie", isCorrect: true },
-        { text: "Wha", isCorrect: false }
-    ]
-
-},
-{
-    id: 5,
-    q: "What genre of music are you feeling the most?",
-    a: [{ text: "surat", isCorrect: false },
-        { text: "vadodara", isCorrect: false },
-        { text: "gandhinagar", isCorrect: true },
-        { text: "rajkot", isCorrect: false }
+    a: [{ text: "No one (free spirit)", image: "", isCorrect: false },
+        { text: "Hundreds if not thousands", image: "", isCorrect: false },
+        { text: "Just some amigos", image: "", isCorrect: true },
+        { text: "Just my phone", image: "", isCorrect: true },
+        { text: "With my bestie", image: "", isCorrect: true },
+        { text: "What are people", image: "", isCorrect: false }
     ]
 
 }
+// {
+//     id: 5,
+//     q: "What genre of music are you feeling the most?",
+//     a: [{ text: "surat", isCorrect: false },
+//         { text: "vadodara", isCorrect: false },
+//         { text: "gandhinagar", isCorrect: true },
+//         { text: "rajkot", isCorrect: false }
+//     ]
+
+// }
 
 ]
 
@@ -119,28 +140,6 @@ var selected = "";
 
 var binNumber = 0;
 
-function getNumber() {
-    if (op1.value) {
-        binNumber = 0;
-    }
-    if (op2.value) {
-        binNumber = 100;
-    }
-    if (op3.value) {
-        binNumber = 20;
-    }
-    if (op4.value) {
-        binNumber = 40;
-    }
-    if (op5.value) {
-        binNumber = 60;
-    }
-    if (op6.value) {
-        binNumber = 80;
-    }
-    return binNumber;
-}
-
 
 // Show selection for op1
 op1.addEventListener("click", () => {
@@ -152,7 +151,11 @@ op1.addEventListener("click", () => {
     op6.style.backgroundColor = "lightskyblue";
     selected = op1.value;
     if (Questions[id].id == 0) {
-        binNumber = getNumber();
+        if (selected) {
+            binNumber = 0;
+            p2.body.style.backgroundColor = "blue";
+
+        }
         console.log(binNumber);
     }
 })
@@ -166,8 +169,10 @@ op2.addEventListener("click", () => {
     op5.style.backgroundColor = "lightskyblue";
     op6.style.backgroundColor = "lightskyblue";
     selected = op2.value;
-    if (Questions[id] == 0) {
-        binNumber = getNumber();
+    if (Questions[id].id == 0) {
+        if (selected) {
+            binNumber = 100;
+        }
         console.log(binNumber);
     }
 })
@@ -181,10 +186,13 @@ op3.addEventListener("click", () => {
     op5.style.backgroundColor = "lightskyblue";
     op6.style.backgroundColor = "lightskyblue";
     selected = op3.value;
-    if (Questions[id] == 0) {
-        binNumber = getNumber();
+    if (Questions[id].id == 0) {
+        if (selected) {
+            binNumber = 60;
+        }
         console.log(binNumber);
     }
+   
 })
 
 // Show selection for op4
@@ -196,10 +204,13 @@ op4.addEventListener("click", () => {
     op5.style.backgroundColor = "lightskyblue";
     op6.style.backgroundColor = "lightskyblue";
     selected = op4.value;
-    if (Questions[id] == 0) {
-        binNumber = getNumber();
+    if (Questions[id].id == 0) {
+        if (selected) {
+            binNumber = 20;
+        }
         console.log(binNumber);
     }
+   
 })
 
 // Show selection for op5
@@ -211,10 +222,13 @@ op5.addEventListener("click", () => {
     op5.style.backgroundColor = "lightgoldenrodyellow";
     op6.style.backgroundColor = "lightskyblue";
     selected = op5.value;
-    if (Questions[id] == 0) {
-        binNumber = getNumber();
+    if (Questions[id].id == 0) {
+        if (selected) {
+            binNumber = 40;
+        }
         console.log(binNumber);
     }
+   
 })
 
 // Show selection for op6
@@ -226,10 +240,13 @@ op6.addEventListener("click", () => {
     op5.style.backgroundColor = "lightskyblue";
     op6.style.backgroundColor = "lightgoldenrodyellow";
     selected = op6.value;
-    if (Questions[id] == 0) {
-        binNumber = getNumber();
+    if (Questions[id].id == 0) {
+        if (selected) {
+            binNumber = 80;
+        }
         console.log(binNumber);
     }
+  
 })
 }
 
@@ -247,7 +264,28 @@ if (id < 4) {
     id++;
     iterate(id);
     console.log(id);
+    
 }
-})
+op1.style.backgroundColor = null;
+op2.style.backgroundColor = null;
+op3.style.backgroundColor = null;
+op4.style.backgroundColor = null;
+op5.style.backgroundColor = null;
+op6.style.backgroundColor = null;
+if (id == 4) {
+    window.location.href = "answers.html";
+}
 
+}
+);
+
+// Back button
 const back = document.getElementsByClassName('back')[0];
+back.addEventListener("click", () => {
+    start = false;
+    id--;
+    iterate(id);
+    console.log(id);
+    });
+
+

@@ -126,6 +126,12 @@ button {
   margin: auto;
 }
 
+.next {
+  margin: 2.5em;
+}
+.back {
+  margin: 2.5em;
+}
 /* Page 2 */
 .answer {
   margin-top: 1em;
@@ -336,4 +342,19 @@ button {
 
 .disk.play{
   animation-play-state: running;
+}
+
+.retake {
+  margin-bottom: 2em;
+  margin-left: 92%;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: underline;
 }
