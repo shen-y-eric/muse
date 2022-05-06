@@ -290,10 +290,6 @@ back.addEventListener("click", () => {
     console.log(id);
     });
 
-
-const back = document.getElementsByClassName('back')[0];
-
-
 function getSong() {
     if (binNumber == 0) {
         /* MAKE SAD SONG */
