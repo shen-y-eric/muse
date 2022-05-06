@@ -51,7 +51,7 @@ const Questions = [{
 
 }, */
 {
-    id: 4,
+    id: 3,
     q: "How many people do you wanna be around?",
     a: [{ text: "No one (free spirit)", isCorrect: false },
         { text: "Hundreds if not thousands", isCorrect: false },
@@ -62,6 +62,8 @@ const Questions = [{
     ]
 
 },
+
+/*
 {
     id: 5,
     q: "What genre of music are you feeling the most?",
@@ -71,7 +73,7 @@ const Questions = [{
         { text: "rajkot", isCorrect: false }
     ]
 
-}
+}*/
 
 ]
 
@@ -99,6 +101,8 @@ const op3 = document.getElementById('op3');
 const op4 = document.getElementById('op4');
 const op5 = document.getElementById('op5');
 const op6 = document.getElementById('op6');
+
+const p2 = document.getElementById('page2');
 
 
 // Providing option text 
@@ -251,3 +255,25 @@ if (id < 4) {
 })
 
 const back = document.getElementsByClassName('back')[0];
+
+
+function getSong() {
+    if (binNumber == 0) {
+        /* MAKE SAD SONG */
+    }
+    if (binNumber == 20) {
+        /* MAKE STUDY MUSIC SONG */
+    }
+    if (binNumber == 40) {
+        /* MAKE EATING SONG */
+    }
+    if (binNumber == 60) {
+        /* MAKE DRIVING BOP SONG */
+    }
+    if (binNumber == 80) {
+        /* MAKE KARAOKE SONG */
+    }
+    if (binNumber == 100) {
+        /* MAKE DANCE CLUB SONG */
+    }
+}
