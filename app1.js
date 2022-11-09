@@ -56,8 +56,8 @@ playBtn.addEventListener('click', () => {
 
 const setMusic = (i) => {
     seekBar.value = 0; // set range slide value to 0;
-    //let song = songs[i];
-    let song = getSong();
+    let song = songs[i];
+    //let song = getSong();
     currentMusic = i;
     music.src = song.path;
 

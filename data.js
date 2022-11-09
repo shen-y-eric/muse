@@ -7,15 +7,9 @@ let songs = [
     },
     {
         name: "Stay",
-        path: "music/mp3/stay.mp3",
+        path: "./music/mp3/stay.mp3",
         artist: "Rihanna",
-        cover: "music/images/stay.jpeg"
-    },
-    {
-        name: "Put Your Records On",
-        path: "music/mp3/records.mp3",
-        artist: "Corinne Bailey Rae",
-        cover: "music/images/records.jpeg"
+        cover: "./music/images/stay.jpeg"
     },
     {
         name: "She Will Be Loved",
@@ -35,12 +29,12 @@ let songs = [
         artist: "Ed Sheeran",
         cover: "music/images/sheeran.png"
     },
-    {
+    /*{
         name: "I Just Called To Say I Love You",
         path: "music/mp3/wonder.mp3",
         artist: "Stevie Wonder",
         cover: "music/images/wonder.jpeg"
-    },
+    },*/
     {
         name: "Make You Feel My Love",
         path: "music/mp3/love_adele.mp3",
@@ -53,6 +47,12 @@ let songs = [
         artist: "Passenger",
         cover: "music/images/passenger.jpeg"
     },
+    /*{
+        name: "Put Your Records On",
+        path: "music/mp3/records.mp3",
+        artist: "Corinne Bailey Rae",
+        cover: "music/images/records.jpeg"
+    },*/
     {
         name: "Memories",
         path: "music/mp3/Memories.mp3",
